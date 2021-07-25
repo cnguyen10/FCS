@@ -1,1 +1,7 @@
 theme: jekyll-theme-cayman
+
+title: Foundation of Computer Science
+description: > # this means to ignore newlines until "baseurl:"
+  This is a website used for the course Foundation of Computer Science at the University of Adelaide
+
+baseurl: "" # the subpath of your site, e.g. /blog

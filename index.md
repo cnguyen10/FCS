@@ -1,5 +1,3 @@
-<h1>Foundation of Computer Science</h1>
-
 <section>
     <h2>Request</h2>
     <div id="student-request" style="clear: both;">
