@@ -6,13 +6,13 @@ title: "Foundation of Computer Science"
     <h2>Request</h2>
     <div id="student-request" style="clear: both;">
         <form name="submit-to-google-sheet">
-            <label style="display: inline-block; width: 100px;">Student name</label>
-            <input name="student_name" placeholder="Cuong Nguyen" required/>
+            <label style="display: inline-block; width: 150px;">Student name</label>
+            <input name="student_name" placeholder="Your name" required/>
             <br />
-            <label style="display: inline-block; width: 100px;">Room number</label>
+            <label style="display: inline-block; width: 150px;">Room number</label>
             <input name="room_number" placeholder="8"/>
             <br />
-            <label style="display: inline-block; width: 100px;">Inquiry</label>
+            <label style="display: inline-block; width: 150px;">Inquiry</label>
             <input name="inquiry" placeholder="Mark assignment 1"/>
             <br />
             <input name="status" placeholder="" hidden/>
