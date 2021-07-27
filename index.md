@@ -3,24 +3,34 @@ title: "Foundation of Computer Science"
 ---
 
 <section>
-    <h2>Request</h2>
-    <div id="student-request" style="clear: both;">
-        <form name="submit-to-google-sheet">
-            <label style="display: inline-block; width: 150px;">Student name</label>
-            <input name="student_name" placeholder="Your name" required/>
-            <br />
-            <label style="display: inline-block; width: 150px;">Room number</label>
-            <input name="room_number" placeholder="8"/>
-            <br />
-            <label style="display: inline-block; width: 150px;">Inquiry</label>
-            <input name="inquiry" placeholder="Mark assignment 1"/>
-            <br />
-            <input name="status" placeholder="" hidden/>
-            <br />
-            <button type="submit">Send</button>
-        </form>
-    </div>
+  <h2>Request</h2>
+<!-- get current time -->
+{% assign current_hour = now | date: "%k" %}
+{% assign current_week_day = now | date "%w" %}
+{% if current_hour > 13 and current_hour < 15 and current_week_day > 0 and current_week_day < 3 %}
+  <div id="student-request" style="clear: both;">
+      <form name="submit-to-google-sheet">
+          <label style="display: inline-block; width: 150px;">Student name</label>
+          <input name="student_name" placeholder="Your name" required/>
+          <br />
+          <label style="display: inline-block; width: 150px;">Room number</label>
+          <input name="room_number" placeholder="8"/>
+          <br />
+          <label style="display: inline-block; width: 150px;">Inquiry</label>
+          <input name="inquiry" placeholder="Mark assignment 1"/>
+          <br />
+          <input name="status" placeholder="" hidden/>
+          <br />
+          <button type="submit">Send</button>
+      </form>
+  </div>
+{% else %}
+  <div>
+    Workshop session has not been started yet. Please come back on Monday or Tuesday from 1:00 PM to 3:00 PM.
+  </div>
+{% endif %}
 </section>
+
 <br />
 <section>
     <h2>Queuing list</h2>
