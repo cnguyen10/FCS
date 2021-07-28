@@ -27,7 +27,7 @@ title: "Foundation of Computer Science"
 <section>
     <h2>Queuing list</h2>
     <div>
-        <iframe id="queuing-iframe" name="queuing-iframe" src="https://docs.google.com/spreadsheets/d/12O-1mD3zoCPbDc-oz1cZRwD7ou_lbGLKKZu-hN4vur4/gviz/tq?tqx=out:html&tq&gid=0" frameborder="0" width="100%" height="500px" allowfullscreen></iframe>
+        <iframe id="queuing-iframe" name="queuing-iframe" src="https://docs.google.com/spreadsheets/d/12O-1mD3zoCPbDc-oz1cZRwD7ou_lbGLKKZu-hN4vur4/gviz/tq?tqx=out:html&tq&gid=0" frameborder="0" width="100%" height="2000px" allowfullscreen></iframe>
     </div>
 </section>
 
