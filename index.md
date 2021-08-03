@@ -38,7 +38,7 @@ title: "Foundation of Computer Science"
 
   form.addEventListener('submit', e => {
     alert("Your request has been submitted. Please wait for a few seconds before the data is updated.");
-    e.preventDefault();
+    // e.preventDefault();
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
       .then(response => {
