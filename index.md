@@ -37,6 +37,7 @@ title: "Foundation of Computer Science"
   const form = document.forms['submit-to-google-sheet'];
 
   form.addEventListener('submit', e => {
+    alert("Your request has been submitted. Please wait for a few seconds before the data is updated.");
     e.preventDefault();
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
@@ -44,7 +45,6 @@ title: "Foundation of Computer Science"
         // refresh iframe
         queu_iframe = document.getElementById('queuing-iframe');
         queu_iframe.parentNode.replaceChild(queu_iframe.cloneNode(), queu_iframe);
-        alert("Your request has been submitted");
       })
       .catch(error => console.error('Error!', error.message));
   })
