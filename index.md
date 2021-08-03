@@ -4,7 +4,7 @@ title: "Foundation of Computer Science"
 <section>
   <h2>Request</h2>
   <div id="student-request" style="clear: both;">
-      <form name="submit-to-google-sheet">
+      <form name="submit-to-google-sheet" id="submit-to-google-sheet">
           <label style="display: inline-block; width: 150px;">Student name</label>
           <input name="student_name" placeholder="Your name" required/>
           <br />
@@ -20,6 +20,10 @@ title: "Foundation of Computer Science"
       </form>
   </div>
 </section>
+
+<div id="status-div" hidden>
+  Your request has been submitted. The page will automatically updated after a few seconds.
+</div>
 
 <br />
 
@@ -37,16 +41,29 @@ title: "Foundation of Computer Science"
   const form = document.forms['submit-to-google-sheet'];
 
   form.addEventListener('submit', e => {
-    alert("Your request has been submitted. Please wait for a few seconds before the data is updated.");
-    // e.preventDefault();
+    e.preventDefault();
+    
+    ToggleStatus();
+
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
       .then(response => {
         // refresh iframe
         queu_iframe = document.getElementById('queuing-iframe');
         queu_iframe.parentNode.replaceChild(queu_iframe.cloneNode(), queu_iframe);
+        document.getElementById("submit-to-google-sheet").reset();
+        ToggleStatus();
       })
       .catch(error => console.error('Error!', error.message));
   })
+
+  function ToggleStatus() {
+    var x = document.getElementById("status-div");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 
 </script>
