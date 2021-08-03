@@ -44,6 +44,7 @@ title: "Foundation of Computer Science"
         // refresh iframe
         queu_iframe = document.getElementById('queuing-iframe');
         queu_iframe.parentNode.replaceChild(queu_iframe.cloneNode(), queu_iframe);
+        alert("Your request has been submitted");
       })
       .catch(error => console.error('Error!', error.message));
   })
